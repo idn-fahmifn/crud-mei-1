@@ -14,16 +14,15 @@
                             <span>Form menambahkan ruangan.</span>
                         </div>
                     </div>
-
                     {{-- form input --}}
                     <form action="#" method="post">
                         @csrf
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="">Nama Ruangan</label>
-                            <input type="text" name="nama_ruangan" id="nama_ruangan" required class="form-control">
+                            <input type="text" name="nama_ruangan" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <label for="">Ukuran</label>
                             <select name="ukuran" id="ukuran" required class="form-control">
                                 <option value="">-Pilih Ukuran-</option>
@@ -33,12 +32,10 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
                             <button type="submit" class="btn btn-success">Tambah</button>
                         </div>
-
                     </form>
-
                 </div>
             </div>
         </div>
