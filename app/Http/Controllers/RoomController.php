@@ -53,7 +53,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        //
+        return view('room.detail');
     }
 
     /**
