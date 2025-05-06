@@ -33,6 +33,7 @@ class RoomController extends Controller
         //validasi
         $request->validate([
             'nama_ruangan' => 'required|string|min:5|max:60',
+            'nomor_ruangan' => 'required|string|min:1|max:100',
             'ukuran' => 'required',
         ]);
 
@@ -40,7 +41,8 @@ class RoomController extends Controller
         Room::create($input);
 
         //jika data sudah dikirim, maka akan di redirect ke halaman index.
-        return redirect()->route('room.index')->with('success', 'Data ruangan berhasil ditambahkan');
+        return redirect()->route('room.index')
+        ->with('success', 'Data ruangan berhasil ditambahkan');
 
 
     }

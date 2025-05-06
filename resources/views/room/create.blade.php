@@ -19,7 +19,12 @@
                         @csrf
                         <div class="form-group mt-2">
                             <label for="">Nama Ruangan</label>
-                            <input type="text" name="ruangan" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">
+                            <input type="text" name="nama_ruangan" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">
+                        </div>
+
+                        <div class="form-group mt-2">
+                            <label for="">Nomor Ruangan</label>
+                            <input type="text" name="nomor_ruangan" id="nomor_ruangan" required class="form-control" placeholder="ex. garasi">
                         </div>
 
                         <div class="form-group mt-2">
