@@ -6,8 +6,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    
 
+                    {{-- area header --}}
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="">
                             <h4>Data Ruangan</h4>
@@ -18,6 +18,7 @@
                         </div>
                     </div>
 
+                    {{-- area table --}}
                     <div class="table-responsive mt-4">
                         <table class="table table-striped">
                             <thead>
