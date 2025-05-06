@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_room')->constrained('rooms')->cascadeOnDelete();
+            $table->string('nama_barang');
+            $table->string('brand');
             $table->timestamps();
         });
     }
