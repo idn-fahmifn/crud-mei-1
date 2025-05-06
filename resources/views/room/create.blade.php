@@ -15,6 +15,30 @@
                         </div>
                     </div>
 
+                    {{-- form input --}}
+                    <form action="#" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label for="">Nama Ruangan</label>
+                            <input type="text" name="nama_ruangan" id="nama_ruangan" required class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Ukuran</label>
+                            <select name="ukuran" id="ukuran" required class="form-control">
+                                <option value="">-Pilih Ukuran-</option>
+                                <option value="small">small</option>
+                                <option value="large">large</option>
+                                <option value="extra large">extra large</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Tambah</button>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
         </div>

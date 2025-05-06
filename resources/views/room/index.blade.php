@@ -33,6 +33,13 @@
                                         <a href="#" class="btn btn-danger">Hapus</a>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Ruangan A</td>
+                                    <td>
+                                        <a href="#" class="btn btn-primary">Detail</a>
+                                        <a href="#" class="btn btn-danger">Hapus</a>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
