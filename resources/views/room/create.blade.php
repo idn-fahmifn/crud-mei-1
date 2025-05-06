@@ -15,11 +15,11 @@
                         </div>
                     </div>
                     {{-- form input --}}
-                    <form action="#" method="post">
+                    <form action="{{route('room.store')}}" method="post">
                         @csrf
                         <div class="form-group mt-2">
                             <label for="">Nama Ruangan</label>
-                            <input type="text" name="nama_ruangan" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">
+                            <input type="text" name="ruangan" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">
                         </div>
 
                         <div class="form-group mt-2">

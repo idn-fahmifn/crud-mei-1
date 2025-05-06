@@ -28,7 +28,21 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $input = $request->all(); //mengambil semua value yang dimasukan dari form
+
+        //validasi
+        $request->validate([
+            'nama_ruangan' => 'required|string|min:5|max:60',
+            'ukuran' => 'required',
+        ]);
+
+        //memanggil model untuk menambahkan data yang nilainya dari $input.
+        Room::create($input);
+
+        //jika data sudah dikirim, maka akan di redirect ke halaman index.
+        return redirect()->route('room.index')->with('success', 'Data ruangan berhasil ditambahkan');
+
+
     }
 
     /**
