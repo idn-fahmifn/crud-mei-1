@@ -14,7 +14,7 @@
                                 <span>Data semua ruangan.</span>
                             </div>
                             <div class="">
-                                <a href="" class="btn btn-success">Buat Data</a>
+                                <a href="{{route('room.create')}}" class="btn btn-success">Buat Data</a>
                             </div>
                         </div>
 
@@ -33,20 +33,15 @@
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
+                                    @foreach ($data as $item)
                                     <tr>
-                                        <td>Ruangan A</td>
+                                        <td>{{$item->nama_ruangan}}</td>
                                         <td>
                                             <a href="#" class="btn btn-primary">Detail</a>
                                             <a href="#" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>Ruangan A</td>
-                                        <td>
-                                            <a href="#" class="btn btn-primary">Detail</a>
-                                            <a href="#" class="btn btn-danger">Hapus</a>
-                                        </td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
