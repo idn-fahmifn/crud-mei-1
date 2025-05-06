@@ -19,15 +19,15 @@
                             <tbody>
                                 <tr>
                                     <td>Nama Ruangan</td>
-                                    <td>Ruangan A</td>
+                                    <td>{{$data->nama_ruangan}}</td>
                                 </tr>
                                 <tr>
                                     <td>Nomor Ruangan</td>
-                                    <td>Ruangan A</td>
+                                    <td>{{$data->nomor_ruangan}}</td>
                                 </tr>
                                 <tr>
                                     <td>Deskripsi</td>
-                                    <td>Ruangan A</td>
+                                    <td>{{$data->ukuran}}</td>
                                 </tr>
                             </tbody>
                         </table>
