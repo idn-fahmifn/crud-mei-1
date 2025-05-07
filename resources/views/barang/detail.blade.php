@@ -53,9 +53,10 @@
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="#" method="post">
+                <form action="{{route('item.update', $data->id)}}" method="post">
                     <div class="modal-body">
                         @csrf
+                        @method('put')
                         <div class="form-group mt-2">
                             <label for="">Nama Barang</label>
                             <input type="text" name="nama_barang" value="{{$data->nama_barang}}" id="nama_barang" required class="form-control"
