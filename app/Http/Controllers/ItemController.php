@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -15,7 +16,9 @@ class ItemController extends Controller
 
     public function create()
     {
-        return view('barang.create');
+        // memanggil model room agar bisa ditampilkan di halaman create
+        $room = Room::all();
+        return view('barang.create', compact('room'));
     }
 
 }

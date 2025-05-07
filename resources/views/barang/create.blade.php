@@ -30,10 +30,10 @@
                         <div class="form-group mt-2">
                             <label for="">Disimpan di</label>
                             <select name="ukuran" id="ukuran" required class="form-control">
-                                <option value="">-Pilih Ukuran-</option>
-                                <option value="small">small</option>
-                                <option value="large">large</option>
-                                <option value="extra large">extra large</option>
+                                <option value="">-Pilih tempat penyimpanan-</option>
+                                @foreach ($room as $item)
+                                    <option value="{{$item->id}}">{{$item->nama_ruangan}}</option>
+                                @endforeach
                             </select>
                         </div>
 
