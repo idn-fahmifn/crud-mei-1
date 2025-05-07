@@ -34,4 +34,10 @@ class ItemController extends Controller
         ->with('success', 'Barang berhasil ditambahkan');
     }
 
+    public function show($id)
+    {
+        $data = Item::findOrFail($id);
+        return view('barang.detail', compact('data'));
+    }
+
 }

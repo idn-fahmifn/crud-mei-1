@@ -25,3 +25,6 @@ Route::get('item', [ItemController::class, 'index'])->name('item.index');
 Route::get('item/create', [ItemController::class, 'create'])->name('item.create');
 // Route store
 Route::post('item', [ItemController::class, 'store'])->name('item.store');
+// Route detail
+Route::get('item/{param}', [ItemController::class, 'show'])->name('item.show');
+
