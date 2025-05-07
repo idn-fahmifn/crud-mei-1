@@ -21,4 +21,16 @@ class ItemController extends Controller
         return view('barang.create', compact('room'));
     }
 
+    public function store(Request $request)
+    {
+        $input = $request->all();
+        $request->validate([
+            'nama_barang' => 'required|string|min:5|max:60',
+            'brand' => 'required|string|min:5|max:60',
+            'id_room' => 'required',
+        ]);
+        Item::create($input);
+        return redirect()->route('item.index')->with('success', 'Barang berhasil ditambahkan');
+    }
+
 }

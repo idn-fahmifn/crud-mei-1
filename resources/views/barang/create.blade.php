@@ -15,7 +15,7 @@
                         </div>
                     </div>
                     {{-- form input --}}
-                    <form action="#" method="post">
+                    <form action="{{route('item.store')}}" method="post">
                         @csrf
                         <div class="form-group mt-2">
                             <label for="">Nama Barang</label>
@@ -30,8 +30,8 @@
                         <div class="form-group mt-2">
                             <label for="">Disimpan di</label>
                             <select name="id_room" id="id_room" required class="form-control">
-                                <option value="">-Pilih Ukuran-</option>
-                                @foreach ($room as $iten)
+                                <option value="">-Pilih tempat penyimpanan-</option>
+                                @foreach ($room as $item)
                                     <option value="{{$item->id}}">{{$item->nama_ruangan}}</option>
                                 @endforeach
                             </select>

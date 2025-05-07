@@ -21,6 +21,7 @@ Route::resource('room', RoomController::class);
 
 // Route index
 Route::get('item', [ItemController::class, 'index'])->name('item.index');
-
 //Route create
 Route::get('item/create', [ItemController::class, 'create'])->name('item.create');
+// Route store
+Route::post('item', [ItemController::class, 'store'])->name('item.store');
