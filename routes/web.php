@@ -27,4 +27,6 @@ Route::get('item/create', [ItemController::class, 'create'])->name('item.create'
 Route::post('item', [ItemController::class, 'store'])->name('item.store');
 // Route detail
 Route::get('item/{param}', [ItemController::class, 'show'])->name('item.show');
+// Route update
+Route::put('item/{param}', [ItemController::class, 'update'])->name('item.update');
 

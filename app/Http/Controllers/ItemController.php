@@ -41,4 +41,17 @@ class ItemController extends Controller
         return view('barang.detail', compact('data', 'room'));
     }
 
+    public function update(Request $request, $id)
+    {
+        $data = Item::findOrFail($id);
+        $input = $request->all();
+        $request->validate([
+            'nama_barang' => 'required|string|min:5|max:60',
+            'brand' => 'required|string|min:5|max:60',
+            'id_room' => 'required',
+        ]);
+        $data->update($input);
+        return back()->with('success', 'Barang berhasil diubah');
+    }
+
 }
