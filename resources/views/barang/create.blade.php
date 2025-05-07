@@ -14,6 +14,19 @@
                             <span>Form menambahkan barang.</span>
                         </div>
                     </div>
+
+                    @if ($errors->any())
+                            <div class="alert alert-danger alert-dismissible fade show mt-4" role="alert">
+                                <strong>Whoops!</strong>
+                                <ol>
+                                    @foreach ($errors->all() as $item)
+                                        <li>{{$item}}</li>
+                                    @endforeach
+                                </ol>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
+
                     {{-- form input --}}
                     <form action="{{route('item.store')}}" method="post">
                         @csrf

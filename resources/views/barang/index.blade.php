@@ -23,6 +23,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
+
+
                         {{-- area table --}}
                         <div class="table-responsive mt-4">
                             <table class="table table-striped">
@@ -41,10 +43,10 @@
                                                     @csrf
                                                     @method('delete')
 
-                                                    <a href=""
-                                                        class="btn text-muted">Detail</a>
+                                                    <a href="" class="btn text-muted">Detail</a>
                                                     <a href="" class="btn text-muted">Edit</a>
-                                                    <button type="submit" class="btn text-danger" onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
+                                                    <button type="submit" class="btn text-danger"
+                                                        onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
                                                 </form>
                                             </td>
                                         </tr>
