@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Models\Room;
 use Illuminate\Http\Request;
 
@@ -44,8 +45,6 @@ class RoomController extends Controller
         //jika data sudah dikirim, maka akan di redirect ke halaman index.
         return redirect()->route('room.index')
         ->with('success', 'Data ruangan berhasil ditambahkan');
-
-
     }
 
     /**
@@ -54,7 +53,8 @@ class RoomController extends Controller
     public function show(Room $room)
     {
         $data = Room::findOrFail($room->id);
-        return view('room.detail', compact('data'));
+        $barang = Item::where('id_room', $room->id)->get()->all();
+        return view('room.detail', compact('data', 'barang'));
     }
 
     /**

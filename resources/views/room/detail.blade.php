@@ -48,20 +48,19 @@
                     </div>
 
                     <div class="table-responsive mt-4">
+
                         <table class="table table-hover">
+                            <thead>
+                                <th>Nama Barang</th>
+                                <th>Brand</th>
+                            </thead>
                             <tbody>
-                                <tr>
-                                    <td>Nama Ruangan</td>
-                                    <td>{{$data->nama_ruangan}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Nomor Ruangan</td>
-                                    <td>{{$data->nomor_ruangan}}</td>
-                                </tr>
-                                <tr>
-                                    <td>Deskripsi</td>
-                                    <td>{{$data->ukuran}}</td>
-                                </tr>
+                                @foreach ($barang as $item)
+                                    <tr>
+                                        <td>{{$item->nama_barang}}</td>
+                                        <td>{{$item->brand}}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
