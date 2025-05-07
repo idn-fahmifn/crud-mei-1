@@ -60,5 +60,6 @@ class ItemController extends Controller
         $data->delete();
         return back()->with('success', 'Data berhasil dihapus');
     }
+    
 
 }
