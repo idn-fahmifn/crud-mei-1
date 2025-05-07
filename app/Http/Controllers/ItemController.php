@@ -37,7 +37,8 @@ class ItemController extends Controller
     public function show($id)
     {
         $data = Item::findOrFail($id);
-        return view('barang.detail', compact('data'));
+        $room = Room::all();
+        return view('barang.detail', compact('data', 'room'));
     }
 
 }
