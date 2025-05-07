@@ -54,4 +54,11 @@ class ItemController extends Controller
         return back()->with('success', 'Barang berhasil diubah');
     }
 
+    public function delete($param)
+    {
+        $data = Item::findOrFail($param);
+        $data->delete();
+        return back()->with('success', 'Data berhasil dihapus');
+    }
+
 }

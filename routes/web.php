@@ -6,6 +6,7 @@ use App\Http\Controllers\RoomController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,4 +30,7 @@ Route::post('item', [ItemController::class, 'store'])->name('item.store');
 Route::get('item/{param}', [ItemController::class, 'show'])->name('item.show');
 // Route update
 Route::put('item/{param}', [ItemController::class, 'update'])->name('item.update');
+//route delete
+Route::delete('item/{param}', [ItemController::class, 'delete'])->name('item.delete');
+
 

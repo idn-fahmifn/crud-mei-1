@@ -39,12 +39,11 @@
                                             <td>{{$item->nama_barang}}</td>
                                             <td>{{$item->room->nama_ruangan}}</td>
                                             <td>
-                                                <form action="" method="post">
+                                                <form action="{{route('item.delete', $item->id)}}" method="post">
                                                     @csrf
                                                     @method('delete')
-
-                                                    <a href="" class="btn text-muted">Detail</a>
-                                                    <a href="" class="btn text-muted">Edit</a>
+                                                    
+                                                    <a href="{{route('item.show', $item->id)}}" class="btn text-muted">Detail</a>
                                                     <button type="submit" class="btn text-danger"
                                                         onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
                                                 </form>
