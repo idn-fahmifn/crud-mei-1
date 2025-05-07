@@ -91,6 +91,9 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $data = Room::findOrFail($room->id); //mencari data sesuai parameter yang dipilih
+        $data->delete(); //menghapus nilai sesuai parameter yang dipilih
+        return redirect()->route('room.index')->with('success', 'Ruangan berhasil dihapus');
+
     }
 }
