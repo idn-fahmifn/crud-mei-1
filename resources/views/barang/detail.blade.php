@@ -53,39 +53,34 @@
                     </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-                <form action="{{route('item.store')}}" method="post">
+                <form action="#" method="post">
                     <div class="modal-body">
                         @csrf
                         <div class="form-group mt-2">
                             <label for="">Nama Barang</label>
-                            <input type="text" name="nama_barang" id="nama_barang" required class="form-control"
+                            <input type="text" name="nama_barang" value="{{$data->nama_barang}}" id="nama_barang" required class="form-control"
                                 placeholder="ex. laptop">
                         </div>
-
                         <div class="form-group mt-2">
                             <label for="">Brand</label>
-                            <input type="text" name="brand" id="brand" required class="form-control"
+                            <input type="text" name="brand" value="{{$data->brand}}" id="brand" required class="form-control"
                                 placeholder="ex. Macbook pro M1">
                         </div>
-
                         <div class="form-group mt-2">
                             <label for="">Disimpan di</label>
                             <select name="id_room" id="id_room" required class="form-control">
-                                <option value="">-Pilih tempat penyimpanan-</option>
+                                <option value="{{$data->id_room}}">{{$data->room->nama_ruangan}}</option>
                                 @foreach ($room as $item)
                                     <option value="{{$item->id}}">{{$item->nama_ruangan}}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
-
                     <div class="modal-body">
                         <div class="form-group mt-2">
                             <button type="submit" class="btn btn-success">Edit</button>
                         </div>
                     </div>
-
                 </form>
             </div>
         </div>
