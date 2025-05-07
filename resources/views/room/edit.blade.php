@@ -14,9 +14,19 @@
                             <span>Form edit ruangan.</span>
                         </div>
                     </div>
+
+                    @if (session('success'))
+                        <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                            <strong>Yeay!</strong> {{session('success')}}.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        @endif
+
                     {{-- form input --}}
                     <form action="{{route('room.update', $data->id)}}" method="post">
                         @csrf
+                        @method('put')
+
                         <div class="form-group mt-2">
                             <label for="">Nama Ruangan</label>
                             <input type="text" name="nama_ruangan" value="{{$data->nama_ruangan}}" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">

@@ -71,7 +71,19 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        $data = Room::findOrFail($room->id); //mengambil data yang akan diedit
+        $input = $request->all(); //mengamnil value terbaru dari form 
+
+         //validasi
+         $request->validate([
+            'nama_ruangan' => 'required|string|min:5|max:60',
+            'nomor_ruangan' => 'required|string|min:1|max:100',
+            'ukuran' => 'required',
+        ]);
+
+        $data->update($input); //perintah untuk mengedit data.
+        return back()->with('success', 'Data berhasil diubah');
+
     }
 
     /**
