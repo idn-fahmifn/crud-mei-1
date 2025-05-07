@@ -37,8 +37,8 @@
                                     <tr>
                                         <td>{{$item->nama_ruangan}}</td>
                                         <td>
-                                            <a href="#" class="btn btn-primary">Detail</a>
-                                            <a href="#" class="btn btn-danger">Hapus</a>
+                                            <a href="{{route('room.show', $item->id)}}" class="btn text-muted">Detail</a>
+                                            <a href="{{route('room.edit', $item->id)}}" class="btn text-muted">Edit</a>
                                         </td>
                                     </tr>
                                     @endforeach

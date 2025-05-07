@@ -62,7 +62,8 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        $data = Room::findOrFail($room->id);
+        return view('room.edit', compact('data'));
     }
 
     /**
