@@ -20,4 +20,7 @@ Route::resource('room', RoomController::class);
 // Routing untuk barang 
 
 // Route index
-Route::get('item', [ItemController::class, 'index']);
+Route::get('item', [ItemController::class, 'index'])->name('item.index');
+
+//Route create
+Route::get('item/create', [ItemController::class, 'create'])->name('item.create');

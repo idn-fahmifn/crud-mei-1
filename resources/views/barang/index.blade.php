@@ -10,11 +10,11 @@
                         {{-- area header --}}
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="">
-                                <h4>Data Ruangan</h4>
-                                <span>Data semua ruangan.</span>
+                                <h4>Data Barang</h4>
+                                <span>Data semua barang.</span>
                             </div>
                             <div class="">
-                                <a href="{{route('room.create')}}" class="btn btn-success">Buat Data</a>
+                                <a href="{{route('item.create')}}" class="btn btn-success">Buat Data</a>
                             </div>
                         </div>
 
@@ -29,21 +29,23 @@
                         <div class="table-responsive mt-4">
                             <table class="table table-striped">
                                 <thead>
-                                    <th>Nama Ruangan</th>
+                                    <th>Nama Barang</th>
+                                    <th>Penyimpanan</th>
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
                                     @foreach ($data as $item)
                                         <tr>
-                                            <td>{{$item->nama_ruangan}}</td>
+                                            <td>{{$item->nama_barang}}</td>
+                                            <td>{{$item->penyimpanan}}</td>
                                             <td>
-                                                <form action="{{route('room.destroy', $item->id)}}" method="post">
+                                                <form action="#" method="post">
                                                     @csrf
                                                     @method('delete')
 
-                                                    <a href="{{route('room.show', $item->id)}}"
+                                                    <a href="#"
                                                         class="btn text-muted">Detail</a>
-                                                    <a href="{{route('room.edit', $item->id)}}" class="btn text-muted">Edit</a>
+                                                    <a href="#" class="btn text-muted">Edit</a>
                                                     <button type="submit" class="btn text-danger" onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
                                                 </form>
                                             </td>
