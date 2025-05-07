@@ -17,14 +17,12 @@
                                 <a href="{{route('item.create')}}" class="btn btn-success">Buat Data</a>
                             </div>
                         </div>
-
                         @if (session('success'))
                             <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
                                 <strong>Yeay!</strong> {{session('success')}}.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         @endif
-
                         {{-- area table --}}
                         <div class="table-responsive mt-4">
                             <table class="table table-striped">
@@ -36,16 +34,16 @@
                                 <tbody>
                                     @foreach ($data as $item)
                                         <tr>
-                                            <td>{{$item->nama_barang}}</td>
-                                            <td>{{$item->penyimpanan}}</td>
+                                            <td>{{$item->nama_ruangan}}</td>
+                                            <td>{{$item->nama_ruangan}}</td>
                                             <td>
-                                                <form action="#" method="post">
+                                                <form action="" method="post">
                                                     @csrf
                                                     @method('delete')
 
-                                                    <a href="#"
+                                                    <a href=""
                                                         class="btn text-muted">Detail</a>
-                                                    <a href="#" class="btn text-muted">Edit</a>
+                                                    <a href="" class="btn text-muted">Edit</a>
                                                     <button type="submit" class="btn text-danger" onclick="return confirm('Yakin mau dihapus?')">Hapus</button>
                                                 </form>
                                             </td>

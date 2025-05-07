@@ -10,30 +10,30 @@
                     {{-- area header --}}
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="">
-                            <h4>Data Barang</h4>
-                            <span>Form menambahkan barang.</span>
+                            <h4>Data Ruangan</h4>
+                            <span>Form menambahkan ruangan.</span>
                         </div>
                     </div>
                     {{-- form input --}}
-                    <form action="#" method="post">
+                    <form action="{{route('room.store')}}" method="post">
                         @csrf
                         <div class="form-group mt-2">
-                            <label for="">Nama Barang</label>
-                            <input type="text" name="nama_barang" id="nama_barang" required class="form-control" placeholder="Laptop">
+                            <label for="">Nama Ruangan</label>
+                            <input type="text" name="nama_ruangan" id="nama_ruangan" required class="form-control" placeholder="ex. garasi">
                         </div>
 
                         <div class="form-group mt-2">
-                            <label for="">Brand</label>
-                            <input type="text" name="brand" id="brand" required class="form-control" placeholder="macbook pro">
+                            <label for="">Nomor Ruangan</label>
+                            <input type="text" name="nomor_ruangan" id="nomor_ruangan" required class="form-control" placeholder="ex. garasi">
                         </div>
 
                         <div class="form-group mt-2">
-                            <label for="">Disimpan di</label>
+                            <label for="">Ukuran</label>
                             <select name="ukuran" id="ukuran" required class="form-control">
-                                <option value="">-Pilih tempat penyimpanan-</option>
-                                @foreach ($room as $item)
-                                    <option value="{{$item->id}}">{{$item->nama_ruangan}}</option>
-                                @endforeach
+                                <option value="">-Pilih Ukuran-</option>
+                                <option value="small">small</option>
+                                <option value="large">large</option>
+                                <option value="extra large">extra large</option>
                             </select>
                         </div>
 
