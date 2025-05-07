@@ -34,8 +34,8 @@
                                 <tbody>
                                     @foreach ($data as $item)
                                         <tr>
-                                            <td>{{$item->nama_ruangan}}</td>
-                                            <td>{{$item->nama_ruangan}}</td>
+                                            <td>{{$item->nama_barang}}</td>
+                                            <td>{{$item->room->nama_ruangan}}</td>
                                             <td>
                                                 <form action="" method="post">
                                                     @csrf

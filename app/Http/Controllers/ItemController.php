@@ -30,7 +30,8 @@ class ItemController extends Controller
             'id_room' => 'required',
         ]);
         Item::create($input);
-        return redirect()->route('item.index')->with('success', 'Barang berhasil ditambahkan');
+        return redirect()->route('item.index')
+        ->with('success', 'Barang berhasil ditambahkan');
     }
 
 }
